@@ -321,7 +321,7 @@ layers:
                 not: { protect_class: ['2','3','5']}
             draw:
                 polygons:
-                    style: green-area-dots
+                    style: green-area-circles
                     color: [1.000,1.000,1.000]
                     visible: true
 
@@ -757,12 +757,12 @@ styles:
         mix: [polygons-dots]
         shaders:
             defines:
-                DOTS_BACKGROUND_COLOR: vec3(0.900,0.900,0.900)
+                DOTS_BACKGROUND_COLOR: vec3(0.100,0.100,0.100)
                 DOTS_SIZE: 0.7
                 DOTS_TYPE: fill
                 DOTS_TILE_STYLE: tile
                 DOTS_SCALE: 7.0
-                DOTS_COLOR: vec3(0.870,0.870,0.870)
+                DOTS_COLOR: vec3(0.900,0.900,0.900)
 
     building-dots:
         base: polygons
@@ -784,6 +784,19 @@ styles:
                 DOTS_BACKGROUND_COLOR: vec3(0.650,0.650,0.650)
                 DOTS_SIZE: 0.7
                 DOTS_TYPE: fill
+                DOTS_TILE_STYLE: tile
+                DOTS_SCALE: 11.0
+                DOTS_COLOR: vec3(0.100,0.100,0.100)
+
+    green-area-circles:
+        base: polygons
+        mix: [polygons-dots]
+        shaders:
+            defines:
+                DOTS_BACKGROUND_COLOR: vec3(0.600,0.600,0.600)
+                DOTS_SIZE: 0.4
+                DOTS_TYPE: stroke
+                STROKE: 0.6
                 DOTS_TILE_STYLE: tile
                 DOTS_SCALE: 11.0
                 DOTS_COLOR: vec3(0.100,0.100,0.100)
